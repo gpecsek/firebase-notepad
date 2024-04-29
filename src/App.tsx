@@ -1,10 +1,9 @@
 import React from "react";
-import Login from "./pages/auth/login";
 
 const App = () => {
   return (
     <div>
-      <Login />
+      Main App layout
     </div>
   );
 }
