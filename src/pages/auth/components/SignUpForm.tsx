@@ -1,7 +1,7 @@
 import { Formik } from "formik";
-import { loginValidationSchema } from "../schema/validationSchema";
+import { signUpValidationSchema } from "../schema/validationSchema";
 
-const LoginForm = () => {
+const SignUpForm = () => {
 
   const onSubmit = (values: any) => {
     // Alert the input values of the form that we filled
@@ -12,11 +12,11 @@ const LoginForm = () => {
     <div className="bg-white px-10 py-20 rounded-3xl border border-gray-300">
       <h1 className="text-4xl font-semibold">Login</h1>
       <p className="font-medium text-lg text-gray-500 mt-4">
-        Welcome back, please enter your username and password
+       Please provide your email and password to signup
       </p>
       <div className="mt-8">
         <Formik
-          validationSchema={loginValidationSchema}
+          validationSchema={signUpValidationSchema}
           initialValues={{ email: "", password: "" }}
           onSubmit={onSubmit}
         >
@@ -69,19 +69,15 @@ const LoginForm = () => {
                   <p className="text-red-600">
                     {errors.password && touched.password && errors.password}
                   </p>
-                  <div className="font-medium text-basetext-end my-4">
-                  You don't have an account? <a href="/signup" className="text-blue-400 hover:text-blue-600 ">Sign Up</a>
+                  <div className="font-medium text-base text-blue-600 text-end my-4">
+                    <a href="/auth">Click Here to Log in</a>
                   </div>
                   <div className="mt-8 flex flex-col gap-y-4">
                     <button
                       type="submit"
                       className="hover:bg-white hover:text-blue-600 border hover:border-blue-600 py-4 rounded-xl bg-blue-600 text-white text-lg font-bold"
                     >
-                      Sign in
-                    </button>
-                    <button className="flex items-center justify-center gap-2 text-lg font-bold py-4 rounded-xl border border-gray-200 hover:bg-gray-200 hover:text-blue-600">
-                      <img alt="Logo" src={"images/google-logo.png"} />
-                      Sign in with Google
+                      Sign up
                     </button>
                   </div>
                 </form>
@@ -94,4 +90,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUpForm;
