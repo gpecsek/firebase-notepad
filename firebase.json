@@ -1,10 +1,7 @@
 {
   "hosting": {
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "site": "fir-notepad-1dd7e",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

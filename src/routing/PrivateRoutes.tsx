@@ -12,12 +12,12 @@ const PrivateRoutes = () => {
 
   return (
     <Routes>
-      <Route path="auth/*" element={<Navigate to="/app/home" />} />
+      <Route path="auth/*" element={<Navigate to="/home" />} />
       {/* Pages */}
       <Route path="/app/" element={<AppContentRoutes />}>
         <Route path="home" element={<Home />} />
         {/* Page Not Found */}
-        <Route path="*" element={<Navigate to="/app/home" />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Route>
     </Routes>
   );
